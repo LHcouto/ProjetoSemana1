@@ -36,11 +36,18 @@ const computadores = [
     foto: 'https://storage.googleapis.com/domain-images/60b1f285-d77c-444a-b734-1bc1efd2c472/products/gallery_bd17d9a3-cd93-44a9-9b44-f017a1c7a329.jpg',
     preco: 2.719,
   },
-
 ];
-
+//get all
 app.get('/computadores/todos-computadores', (req, res) => {
   res.send(computadores);
+});
+//get by id
+app.get('/computadores/computador/:id', (req, res) => {
+  const parametroId = Number(req.params.id);
+  const escolhaComputador = computadores.find(
+    (computador) => computador.id === parametroId,
+  );
+  res.send(escolhaComputador);
 });
 
 app.listen(port, () => {
