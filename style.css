@@ -1,0 +1,11 @@
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: rgb(rgb(214, 0, 0), rgb(36, 211, 36), rgb(211, 0, 0))
+}
+
