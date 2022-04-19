@@ -10,5 +10,5 @@ app.use(cors());
 app.use('/computadores', routes);
 
 app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port} 🚀`);
+  console.log(`Servidor rodando em http://localhost:${port}`);
 });

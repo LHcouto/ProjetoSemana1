@@ -1,16 +1,16 @@
 const route = require('express').Router();
-const controllerComputadores = require('../controllers/computador.controller');
+const computadoresController = require('../controllers/computador.controller');
 
 route.get(
   '/todos-computadores',
-  controllerComputadores.findAllComputadoresController,
+  computadoresController.findAllComputadoresController,
 );
 route.get(
   '/computador/:id',
-  controllerComputadores.findByIdComputadorController,
+  computadoresController.findByIdComputadorController,
 );
-route.post('/create', controllerComputadores.createComputadorController);
-route.put('/update/:id', controllerComputadores.updateComputadorController);
-route.delete('/delete/:id', controllerComputadores.deleteComputadorController);
+route.post('/create', computadoresController.createComputadorController);
+route.put('/update/:id', computadoresController.updateComputadorController);
+route.delete('/delete/:id', computadoresController.deleteComputadorController);
 
 module.exports = route;
